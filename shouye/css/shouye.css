@@ -1,0 +1,81 @@
+body.html{
+    width:1920px;
+    height:100%;
+}
+.li-herder{
+    height:1028px;
+    width:1903px;
+    margin:0 auto;
+    background: url(../image/a00.png) no-repeat;
+    position: relative;
+
+}
+.website{
+    position: absolute; 
+    left:502px;
+    top:445px;
+    width:204px;
+    height:67px;
+    /* background: url(../image/btn_home.png) no-repeat 0 0; */
+}
+.website a{
+    display:block;
+    width:204px;
+    height:67px;
+    background: url("../image/btn_home.png") no-repeat;
+}
+.website a:havor{
+    background-position: 0 -67px;
+}
+/* 首页大图部分结束 */
+.hangye{
+    width:100%;
+    height:112px;
+    background-color: #000;
+    position: relative;
+}
+.hangye ul{
+    position: absolute; 
+    margin: auto;
+    left: 0; right: 0; top: 0; bottom: 0;
+    height:112px;
+    width:525px;
+    
+}
+.hangye li{
+    list-style:none;
+    float:left;
+    margin:50px 7px 0;
+}
+
+.hangye img{
+    height:40px;
+}
+.copy{
+    width:100%;
+    height:40px;
+    background-color: #000;
+    border-top:1px solid #222;
+    border-bottom:1px solid #222;
+    color:#666;
+    font-size:12px;
+    text-align:center;
+    line-height:40px;
+}
+
+.jing{
+    width:100%;
+    height:96px;
+    background-color: #000;
+    color:#999;
+    font-size:12px;
+    text-align:center;
+    line-height:40px;
+    padding-top:19px;
+}
+.jing a{
+    color:#999;
+}
+.jing img{
+    vertical-align:middle
+}
