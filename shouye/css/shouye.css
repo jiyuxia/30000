@@ -15,18 +15,258 @@ body.html{
     left:502px;
     top:445px;
     width:204px;
-    height:67px;
-    /* background: url(../image/btn_home.png) no-repeat 0 0; */
+    height:67px;  
 }
 .website a{
     display:block;
     width:204px;
     height:67px;
-    background: url("../image/btn_home.png") no-repeat;
+    background: url("../image/btn_home.png")no-repeat ;
 }
-.website a:havor{
+.website a:hover{
     background-position: 0 -67px;
 }
+/* --------进入官网结束 --------------------*/
+.down{
+    position: absolute; 
+    left:503px;
+    top:532px;
+    width:204px;
+    height:67px;    
+}
+
+.down a{
+    display:block;
+    width:219px;
+    height:67px;
+    background: url(../image/btn.png) no-repeat -51px -17px;
+}
+.down a:hover{
+    background-position: -51px -109px;
+}
+/* --------进入首页结束 --------------------*/
+.giftl{
+    position: absolute; 
+    left:765px;
+    top:543px;
+    width:204px;
+    height:67px;     
+}
+
+.giftl a{
+    display:block;
+    width:172px;
+    height:52px;
+    background: url(../image/btn.png) no-repeat -484px -27px;
+}
+.giftl a:hover{
+    background-position: -484px -119px;
+}
+/* --------媒体礼包结束 --------------------*/
+.giftr{
+    position: absolute; 
+    left:937px;
+    top:543px;
+    width:204px;
+    height:67px;
+}
+
+.giftr a{
+    display:block;
+    width:172px;
+    height:52px;
+    background: url(../image/btn.png) no-repeat -656px -27px;
+}
+.giftr a:hover{
+    background-position: -656px -119px;
+}
+/* --------礼包兑换结束 --------------------*/
+#vid{
+    position: absolute; 
+    left:1117px;
+    top:383px;
+    width:97px;
+    height:97px;
+   
+}
+
+#video{
+    z-index:99;
+    position: fixed; 
+    left:509px;
+    top:192px;
+    width:900px;
+    height:506px;
+    border:none;
+    background-color:#fff;
+    display:none;
+}
+#pimg{
+    
+    position: fixed; 
+    left:1346px;
+    top:136px;
+    width:50px;
+    height:50px;
+    display:none;
+    background:url('../image/close.png') no-repeat;
+
+}
+/* --------------------视频结束 --------------------*/
+/* -------------------登录开始 --------------------*/
+
+#bottom{
+    position: absolute; 
+    left:474px;
+    top:626px;
+    width:958px;
+    height:302px;    
+}
+#bot-left{
+    width:244px;
+    padding-top:41px;
+    padding-left:18px;
+    font-size:14px;
+    font-weight:bold;
+    color:#000;
+    float: left;
+}
+
+.nones{
+    display:none;
+    color:red;
+    font-size:9px;
+}
+#bot-left p{
+    margin-left:9.8px;
+}
+#bot-left .kuang{
+    width:180px;
+    height:30px;
+    margin-bottom:6px;
+    background-color: #d9d9d9;
+    border:1px solid #a4a4a4;
+}
+#bot-left .kuangc{
+    width:75px;
+    height:30px;
+    margin-bottom:6px;
+    background-color: #d9d9d9;
+    border:1px solid #a4a4a4;
+}
+#bot-left span{
+    display:block;
+}
+#kuangd{
+    width:78px;
+    height:24px;
+    float: right;
+    padding-left:20px;
+    margin-right:6px;
+    border:1px solid #30e727;
+}
+#bot-left .clause{
+    margin-left:29px;
+    margin-right:7px;
+    font-size: 12px;
+    color:#333;
+}
+
+#bot-left a{
+    color: #551a8b;
+    font-weight:normal;
+    font-size:12px;
+}
+.register{    /* 注册提交按钮 */
+    width:230px;
+    height:49px;
+    margin-left:18px;
+    margin-top:16px;
+}
+.register a{
+    display:block;
+    width:230px;
+    height:49px;
+    background: url('../image/btn_register.jpg') no-repeat;
+}
+
+.register:hover{  
+    background-position: 0 -49px;
+}
+/*---------------- 注册之后才会显示的-------------------- */
+
+#bot-left-down{
+    display:none;
+    width:226px;
+}
+#bot-left-down h5{
+    font-size:16px;
+    color:#333;
+    text-align:center; 
+}
+#bot-left-down p{
+    font-size:22px;
+    font-weight:bolder;
+    margin-top:10px;
+    color:#ff6600;
+    text-align:center;
+}
+#bot-left-down .pass{
+    width:230px;
+    height:80px;
+    margin-left:10px;
+    margin-top:10px;    
+}
+#bot-left-down .pass a{
+    display:block;
+    width:230px;
+    height:80px;
+background: url("../image/btn_tongxingzheng.jpg") no-repeat;
+}
+#bot-left-down .pass a:hover{  
+    background-position: 0 -80px;
+}
+/* -------------------登录结束 --------------------*/
+
+#bot-right{
+    float: right;  
+    width:680px;
+    height:302px;
+    background-color: rgb(38, 25, 219);
+    position: relative;
+    overflow:hidden;
+}
+#bot-right ul{
+    width:4080px;
+    height:302px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#bot-right ul li{
+    list-style: none;
+    float: left;
+}
+#toLeft{
+    width:50px;
+    height:104px;
+    position:absolute;
+    top:99px;
+    left:0;
+    background: url('../image/arr.png') ;  
+}
+#toRight{
+    width:50px;
+    height:104px;
+    position:absolute;
+    top:99px;
+    right:0;
+    background: url('../image/arr.png') -50px 0 ;
+}
+
+/* -------------------轮播图结束 --------------------*/
+
+
 /* 首页大图部分结束 */
 .hangye{
     width:100%;

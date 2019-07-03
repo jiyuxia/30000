@@ -5,16 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>《300英雄》官方网站-全球首款动漫MOBA-全球首创7v7二次元大乱斗</title>
-
-    <link rel="stylesheet" href="css/shouye.css">
     <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/shouye.css">
+    
 </head>
 <body>
     <div class="li-herder">
         <div class="website">
             <a href="#"></a>
         </div>
+        <div class="down">
+            <a href="#"></a>
+        </div>
+        <div class="giftl">
+            <a href="#"></a>
+        </div>
+        <div class="giftr">
+            <a href="#"></a>
+        </div>
+        <div id="vid">
+        </div>
     </div>
+    <video id="video" controls src="http://ziyuan.jumpw.com/video/300/20190430.mp4">
+    </video>
+    <p id="pimg"></p>
+    <!-- --------------- 以下登录和轮播图 ------------------------- -->
+    <div id="bottom">
+        <div id="bot-left">
+            <div id="bot-left-up">
+                <form action="">
+                账号名：<input type="text" class="kuang" id="userName" name="user"/><i class="nones" id="nones1">!</i>
+                <p>密 码：<input type="password" name="pass" class="kuang" id="userPass"/><i class="nones"  id="nones2">!</i></p>
+                身份证：<input type="text" class="kuang" id="userId"/><i class="nones" id="nones3">!</i>
+                验证码：<input type="text" class="kuangc kuang" id="vcode"/><span id="kuangd"  onclick="createCode()"></span><br/>
+                <input type="radio"  checked='checked' name="clause" class="clause"/>
+                <a href="https://passport.jumpw.com/terms.jsp">同意跳跃网络服务条款</a>
+            </form>
+            <div id="registers" class="register"><a href="#"></a></div><!-- 注册提交按钮 -->
+        </div>
+        <div id="bot-left-down">
+            <h5>恭喜您</h5>
+            <p>qwe</p>
+            <div class="pass">
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>     
+<!-- -------------------------------- 轮 播 图 --------------------------------- -->
+        
+        <div id="bot-right">
+            <ul class="img-list" id="img-list">
+                <li index="0" class="active"><a href="#"><img src="image/b21.jpg" alt=""></a></li>
+                <li index="1"><a href="#"><img src="image/b22.jpg" alt=""></a></li>
+                <li index="2"><a href="#"><img src="image/b23.jpg" alt=""></a></li>
+                <li index="3"><a href="3"><img src="image/b24.jpg" alt=""></a></li>
+                <li index="4"><a href="#"><img src="image/b25.jpg" alt=""></a></li>
+                <li index="0"><a href="#"><img src="image/b21.jpg" alt=""></a></li>
+            </ul>
+            <div id="arr">
+				<div class="toLeft" id="toLeft"></div>
+				<div class="toRight" id="toRight"></div>
+			</div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- --------------- 以下底部文字 ------------------------- -->
     <div class="hangye">
         <ul>
             <li><img src="../shouye/image/logo-jump.png "></li>
@@ -38,5 +105,21 @@
          版权所有：上海跳跃网络科技有限公司 公司地址：上海市浦东新区金科路2889号长泰广场A座801
     </div>
     <div class="green"></div>
+    <script src="js/animate9.0.js"></script>
+    <script src="js/public.js"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+
+    <!-- <script>
+    var vid = document.getElementById("vid");
+    var pimg = document.getElementById("pimg");
+    vid.onclick = function(){
+        video.style.display = "block"
+        pimg.style.display = "block"
+    }
+    pimg.onclick = function(){
+        video.style.display = "none"
+        pimg.style.display = "none"
+    }
+    </script> -->
 </body>
 </html>
