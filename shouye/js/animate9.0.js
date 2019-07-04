@@ -116,45 +116,54 @@ var vid = document.getElementById("vid");
 // var userIdRed = /^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/
 // --------------------显示随机验证码-------------------------
 
-var code; //在全局定义验证码 
-//产生验证码
-function createCode() {
+	var code; //在全局定义验证码 
+	//产生验证码
+	function createCode() {
 	code = "";
         var checkCode = document.getElementById("kuangd");
         var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C','D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O','P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');//随机数
         for ( var i = 0; i < 4; i++) {//循环操作
             var index = Math.floor(Math.random() * 36);//取得随机数的索引（0~35）
-			code += random[index]+" ";//根据索引取得随机数加到code上
+			code += random[index];//根据索引取得随机数加到code上
+			checkCode.style.color = getColor()
+		//随机获取十六进制颜色值
+			function getColor(){
+				//#4435ff
+				var color = "#";
+				var str = "0123456789abcdef";
+				for (var i = 0; i < 6; i++) {
+					var rand = getRand(0,15);
+					color += str.charAt(rand)
+				}
+				return color;
+			}
 		}
 		checkCode.innerHTML = code;//把code值赋给验证码
-		checkCode.style.color = getColor()
-		//随机获取十六进制颜色值
-		function getColor(){
-			//#4435ff
-			var color = "#";
-			var str = "0123456789abcdef";
-			for (var i = 0; i < 6; i++) {
-				var rand = getRand(0,15);
-				color += str.charAt(rand)
-			}
-			return color;
-		}
-    };
+		
+    }
 	window.onload = createCode;//页面加载,生成验证码	
 	var vcode = document.getElementById("vcode");        
 	function btnLogin(){
-        var inputCode = vcode.value.toUpperCase(); //取得输入的验证码并转化为大写(jQuery中没有转化大小写的方法,只能这么写)
+		var inputCode = vcode.value.toUpperCase(); //取得输入的验证码并转化为大写
+		console.log(inputCode);
+		console.log(code);
+
         if (inputCode.length <= 0) { //若输入的验证码长度为0
 			alert("请输入验证码");
-			return false;
-			
-        }else if (inputCode != code) { //若输入的验证码与产生的验证码不一致时
-            alert("验证码不匹配");
+			// return false;			
+        }else if (inputCode == code) { //若输入的验证码与产生的验证码不一致时
+           
+			return true;
+		}else{
+			 alert("验证码不匹配");
             createCode();//刷新验证码
 			vcode.value = "";//清空文本框
-			return false;
+			// return false;
+			console.log(inputCode);
+			console.log(code);
+	
 		}
-		return true;
+		
 	} 
 
 	// ----------------------提交注册-----------------------
@@ -183,81 +192,11 @@ function createCode() {
 					}
 				})
 			}
-	
 	}
 
 
 
-	// -----------------------注册------------------------------------
-	/* var user=document.getElementsByName('user')[0];
-	var pass=document.getElementsByName('pass')[0];
-
-
-	add.onclick=function (){
-		if (!user.value || !pass.value) {
-			alert('账号或密码不能为空.');
-			return;
-		}
-		ajax({
-			method: 'get',
-			url: 'login2.php',
-			datas: 'act=add&user='+user.value+'&pass='+pass.value,
-			succeed: function (str) {
-				var json=JSON.parse(str);//必须是严格的json格式{"name":"abc","age":"18"}
-				if (json.err) {
-					alert(json.msg);
-				} else{
-					alert(json.msg);
-				};
-			},
-			failed: function (code) {
-				alert(code);
-			}
-		});
-	} */
-
-
-
-
-
-
-
-
-// ---------------------------后台请求数据-------------------------------
-// 账号：<input type="text" name="user" value=""><br>
-// 	密码：<input type="password" name="pass" value=""><br>
-// 	<button id="add">注册</button>
 	
-// </body>
-// <script type="text/javascript" src="ajax.js"></script>
-// <script>
-// 	var user=document.getElementsByName('user')[0];
-// 	var pass=document.getElementsByName('pass')[0];
-// 	var login=document.getElementById('login');
-// 	var add=document.getElementById('add');
-// add.onclick=function (){
-// 	if (!user.value || !pass.value) {
-// 		alert('账号或密码不能为空.');
-// 		return;
-// 	}
-// 	ajax({
-// 		method: 'get',
-// 		url: 'login.php',
-// 		datas: 'act=add&user='+user.value+'&pass='+pass.value,
-// 		succeed: function (str) {
-// 			var json=JSON.parse(str);//必须是严格的json格式{"name":"abc","age":"18"}
-// 			if (json.err) {
-// 				alert(json.msg);
-// 			} else{
-// 				alert(json.msg);
-// 			};
-// 		},
-// 		failed: function (code) {
-// 			alert(code);
-// 		}
-// 	});
-// }
-
 
 
 
@@ -311,7 +250,7 @@ function createCode() {
 		}else{
 			index--;
 		}
-	
+
 		animate(imglist,{left:-680*index},10);
 		
 	}

@@ -1,6 +1,7 @@
 body.html{
     width:1920px;
     height:100%;
+    background-color: #333;
 }
 .li-herder{
     height:1028px;
@@ -160,6 +161,7 @@ body.html{
 #kuangd{
     width:78px;
     height:24px;
+    line-height: 30px;
     float: right;
     padding-left:20px;
     margin-right:6px;
@@ -182,6 +184,7 @@ body.html{
     height:49px;
     margin-left:18px;
     margin-top:16px;
+
 }
 .register a{
     display:block;
@@ -190,7 +193,7 @@ body.html{
     background: url('../image/btn_register.jpg') no-repeat;
 }
 
-.register:hover{  
+.register a:hover{  
     background-position: 0 -49px;
 }
 /*---------------- 注册之后才会显示的-------------------- */
@@ -232,7 +235,6 @@ background: url("../image/btn_tongxingzheng.jpg") no-repeat;
     float: right;  
     width:680px;
     height:302px;
-    background-color: rgb(38, 25, 219);
     position: relative;
     overflow:hidden;
 }
@@ -243,6 +245,11 @@ background: url("../image/btn_tongxingzheng.jpg") no-repeat;
     left: 0;
     top: 0;
 }
+/* #bot-right ul a{
+    display:block;
+    width:680px;
+    height:302px;
+} */
 #bot-right ul li{
     list-style: none;
     float: left;

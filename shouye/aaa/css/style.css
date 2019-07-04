@@ -1,0 +1,4 @@
+body,head,html,title,h1,h2,h3,h4,h5,h6,p,i,u,b,em,strong,img,a,input,ul,dl,ol,li,dd,dt,form,br,hr,table,td,tr,span,sup,sub{padding:0;margin: 0;}
+a{text-decoration: none;}
+ul,ol,dl,li{list-style: none;}
+body{font-size: 12px;}
