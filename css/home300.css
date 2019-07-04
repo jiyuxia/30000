@@ -253,10 +253,11 @@ body {
   margin-left: 5px;
   font-style: normal;
 }
-.zh-head .zh-pic-right .zh-logon form .yzm {
-  position: absolute;
-  top: 218px;
-  left: 110px;
+.zh-head .zh-pic-right .zh-logon form #yzmName {
+  border: none;
+  background: red;
+  width: 30px;
+  height: 26px;
 }
 .zh-head .zh-pic-right .zh-logon form .dl {
   position: absolute;
@@ -276,6 +277,41 @@ body {
   width: 220px;
 }
 .zh-head .zh-pic-right .zh-logon form .question {
+  position: absolute;
+  top: 350px;
+  left: 4px;
+  background: url(../image/home300/14203935572.jpg) no-repeat;
+  width: 232px;
+  height: 85px;
+}
+.zh-head .zh-pic-right .zh-qw {
+  display: none;
+  background: url(../image/home300/registration_bg.png) no-repeat;
+  position: absolute;
+  width: 252px;
+  height: 350px;
+  top: 0px;
+  left: 500px;
+}
+.zh-head .zh-pic-right .zh-qw button {
+  background: url(../image/home300/btn3.jpg) no-repeat;
+  height: 58px;
+  width: 220px;
+  position: absolute;
+  top: 260px;
+  left: 10px;
+  cursor: pointer;
+}
+.zh-head .zh-pic-right .zh-qw button:hover {
+  background: url(../image/home300/btn3.jpg) no-repeat 0px -58px;
+  height: 58px;
+  width: 220px;
+  position: absolute;
+  top: 260px;
+  left: 10px;
+  cursor: pointer;
+}
+.zh-head .zh-pic-right .zh-qw .question {
   position: absolute;
   top: 350px;
   left: 4px;
@@ -407,36 +443,6 @@ body {
 }
 .zh-head .zh-pic-right .zh-navTab .block {
   display: block;
-}
-.zh-head .zh-head2 {
-  height: 120px;
-}
-.zh-head .zh-head2 div {
-  position: absolute;
-  top: 0;
-  right: 90px;
-}
-.zh-head .zh-head2 div .Home-left {
-  display: inline-block;
-  background: url(../image/home300/blackHome.png) no-repeat 0px -24px;
-  width: 80px;
-  height: 24px;
-}
-.zh-head .zh-head2 div .Home-right {
-  display: inline-block;
-  background: url(../image/home300/blackHome.png) no-repeat -80px -24px;
-  width: 80px;
-  height: 24px;
-}
-.zh-head .zh-head2 div .Home-left:hover {
-  background: url(../image/home300/blackHome.png) no-repeat 0px 0px;
-  width: 80px;
-  height: 24px;
-}
-.zh-head .zh-head2 div .Home-right:hover {
-  background: url(../image/home300/blackHome.png) no-repeat -80px 0px;
-  width: 80px;
-  height: 24px;
 }
 
 /*                      foot                         */

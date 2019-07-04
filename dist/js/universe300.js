@@ -1,1 +1,0 @@
-$(".v").click(function(){$(".vid").css({display:"block"}),$("#mask").css({display:"block"})}),$(".cha").click(function(){$(".vid").css({display:"none"}),$("#mask").css({display:"none"})});

@@ -9,10 +9,12 @@ var passName = document.querySelector(".passName");
 var passname = document.querySelector(".passname");
 var idName = document.querySelector(".idName");
 var idname = document.querySelector(".idname");
-var form = document.querySelector("#form");
 var dl = document.querySelector(".dl");
 var user = document.getElementsByName("user")[0];
 var pass=document.getElementsByName('pass')[0];
+var cg = document.querySelector(".zh-qw");
+var logon = document.querySelector(".zh-logon");
+var id = document.getElementById("id");
 
 //轮播图
 var index = 0;
@@ -98,7 +100,7 @@ uName.onblur = function(){
         uname.style.opacity = 0;
     }else{
         uname.style.opacity = 1;
-        alert("账号有误哦!~");
+        /* alert("账号有误哦!~"); */
         userFlag = false;
     }
 }
@@ -121,7 +123,7 @@ passName.onblur = function(){
         passname.style.opacity = 0;
     } else {
         passname.style.opacity = 1;
-        alert("密码有误哦!~");
+        /* alert("密码有误哦!~"); */
         pwdFlag = false;
     }
 }
@@ -145,7 +147,7 @@ idName.onblur = function(){
         idname.style.opacity = 0;
     } else {
         idname.style.opacity = 1;
-        alert("身份证有误哦!~");
+       /*  alert("身份证有误哦!~"); */
         idFlag = false;
     }
 }
@@ -230,39 +232,35 @@ function randomColor() {//得到随机的颜色值
     return "rgb(" + r + "," + g + "," + b + ")";
 }
 //==============所有验证通过=================
-form.onsubmit = function(){
-    if(userFlag&&pwdFlag&&idFlag&&draw){
-        /* alert("注册成功~!"); */
-        return true;
-    }else{
-        alert("注册失败~!")
-        return false;
-    }
-}
-
-//注册账号
 dl.onclick = function(){
-    if(!user.value || !pass.value){
+    if(!userFlag||!pwdFlag||!idFlag){
+        alert("注册失败~!")
+        // window.event? window.event.cancelBubble = true : e.stopPropagation();
+        return true;
+    }else if(!user.value || !pass.value){
         alert("账号或密码不能为空啦!~");
         return;
-    }/* else if(checkName()&&checkPass()&&checkId()){ */
+    }else {
         ajax({
             type:"get",
             url:"http://localhost/zheng/login2.php",
             data:"act=add"+"&user="+user.value+"&pass="+pass.value,
             succeed:function(str){
-                alert(str);
-                /* var json = JSON.parse(str);
-                if (json.arr) {
-                    alert(json.msg);
-                }else{
-                    alert(json.msg)
-                } */
+                logon.style.display = "none";
+                cg.style.display = "block";
+                id.innerHTML = uName.value;
+                return false
+                /* alert(str); */
             },
             failed:function(code){
                 alert(code);
             }
         })
-   /*  } */
-}
+            /* alert("注册成功~!"); */
+            return false;
+        }
+    }
+
+
+
 
