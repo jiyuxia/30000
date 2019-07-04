@@ -7,7 +7,6 @@ body{
     overflow:scroll;
     overflow-x:hidden;
 }
-
 /*                      head                        */
 .zh-head{
     background: url(../image/home300/pic01.jpg) no-repeat;
@@ -274,11 +273,19 @@ body{
                 .yzmname{
                     @extend .uname;
                 }
-                .yzm{
-                   position: absolute;
-                   top: 218px;
-                   left: 110px;
+                #yzmName{
+                    border: none;
+                    background: red;
+                    width: 30px;
+                    height: 26px;
                 }
+               /*  #kuangd{
+                   display: inline-block;
+                   height: 24px;
+                   width: 78px;
+                   border: 1px solid green;
+                   background: yellow;
+                } */
                 .dl{
                     position: absolute;
                     top: 265px;
@@ -438,36 +445,6 @@ body{
                     .block{
                         display: block;
                     }
-        }
-    }
-    .zh-head2{
-        height: 120px;
-        div{
-            position: absolute;
-            top: 0;
-            right: 90px;
-            .Home-left{
-                display: inline-block;
-                background: url(../image/home300/blackHome.png) no-repeat 0px -24px;
-                width: 80px;
-                height: 24px;
-            }
-            .Home-right{
-                display: inline-block;
-                background: url(../image/home300/blackHome.png) no-repeat -80px -24px;
-                width: 80px;
-                height: 24px;
-            }
-            .Home-left:hover{
-                background: url(../image/home300/blackHome.png) no-repeat 0px 0px;
-                width: 80px;
-                height: 24px;
-            }
-            .Home-right:hover{
-                background: url(../image/home300/blackHome.png) no-repeat -80px 0px;
-                width: 80px;
-                height: 24px;
-            }
         }
     }
 }

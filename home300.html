@@ -73,15 +73,11 @@
                 </div>
             </div>
             <div class="zh-logon">
-                <form action="" id="form">
-                    <span>用户名:</span><input type="text" class="uName" placeholder= "请输入4-20字母~"><i class="uname">!</i><br>
-                    <span>密&nbsp;&nbsp;&nbsp;码:</span><input type="password" class="passName" placeholder= "请输入6-20字母或数字~"><i class="passname">!</i><br>
+                <form action="http://localhost/zheng/login2.php" id="form" method="get">
+                    <span>用户名:</span><input type="text" class="uName" placeholder= "请输入4-20字母~" name="user"><i class="uname">!</i><br>
+                    <span>密&nbsp;&nbsp;&nbsp;码:</span><input type="password" class="passName" placeholder= "请输入6-20字母或数字~" name="pass"><i class="passname">!</i><br>
                     <span>身份证:</span><input type="text" class="idName" placeholder= "请输入18位身份证号码~"><i class="idname">!</i><br>
-                    <span>验证码:</span><input type="text" class="yzmName"><i class="yzmname">!</i><br>
-                    <img id="imgObj" name="imgObj" class="yzm" alt="Click To Change!"
-                        src="http://activity.jumpw.com:80/VerifyCodeServlet?codetype=LOGIN&amp;codeid=fe5879a61477431686c0a8371069e486"
-                        onclick="this.src='http://activity.jumpw.com:80/VerifyCodeServlet?codetype=LOGIN&amp;codeid=fe5879a61477431686c0a8371069e486&amp;r='+Math.random() "
-                        height="26" width="100">
+                   <span>验证码:</span><input type="text"  id="input" style="width: 70px"placeholder = "验证码" class="input-val"/><canvas id="canvas" width="100" height="43" style="position: absolute;top:213px;left:125px;"></canvas><br/>
                     <input type="submit" class="dl" value="">
                     <a href="###" class="question"></a>
                 </form>
@@ -220,6 +216,7 @@
             <li class="jingc"><a href="###"><img src="image/home300/beian.png" alt=""></a><span>沪公网安备&nbsp;31011502007403号&nbsp;版权所有：&nbsp;&nbsp;上海跳跃网络科技有限公司&nbsp; 公司地址：&nbsp;&nbsp;上海市浦东新区金科路2889号长泰广场A座801</span></li>
         </ul>
     </div>
+    <script src="js/ajax.js"></script>
     <script src="js/home300.js"></script>
 </body>
 
